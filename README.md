@@ -8,6 +8,9 @@ git clone https://github.com/IConanEdogawa/Education-Platforma-mine
 clone qilib bo`lgach terminal ochilib
 ```
 npm install
+npm install tailwindcss postcss autoprefixer
+npm install bootstrap
+ng add @angular/material
 ng s -o
 ```
 shu bilan UI ishga tushadi.
