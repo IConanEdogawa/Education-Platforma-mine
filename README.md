@@ -1,4 +1,17 @@
 ## Assalomu alaykum
+
+## Foydalanish qoidalri.
+UI ni ishga tushurish uchun 
+```
+git clone https://github.com/IConanEdogawa/Education-Platforma-mine
+```
+clone qilib bo`lgach terminal ochilib
+```
+npm install
+ng s -o
+```
+shu bilan UI ishga tushadi.
+
 bu yerda siz bizning Education-platforma dasturimizga havola olishingiz mumkin.
 Kirgandan so'ng bir marta refresh berilsa moshni ishlayapti
 [YouTube](https://youtu.be/S8d4Wa-pIAc)
