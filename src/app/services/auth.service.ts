@@ -19,6 +19,10 @@ export class AuthService {
   tokenKey = 'accessToken';
   role: string = '';
 
+  resetRequest(email:string):Observable<any>{
+    return this.http.post<any>(this.apiUrl+`Auth/ForgotPassword?email=${email}`,{})
+  }
+
   decodeToken(): any {
     try {
       return jwtDecode(localStorage.getItem(this.tokenKey)!);
@@ -42,7 +46,7 @@ export class AuthService {
       })
     );
   }
-
+  
   login(data: Login): Observable<TokenModel> {
     return this.http.post<TokenModel>(`${this.apiUrl}Auth/Login`, data).pipe(
       map((response) => {
@@ -53,7 +57,7 @@ export class AuthService {
           
           this.decodedToken = this.decodeToken();
           // localStorage.setItem('userId', this.decodeToken);
-          console.log(this.decodeToken);
+          console.log(this.decodeToken());
         }
         return response;
       })

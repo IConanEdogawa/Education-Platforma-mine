@@ -78,6 +78,7 @@ export class CrudService {
     );
   }
   
+
     
   GetAllCategorys(): Observable<any> {
     return this.http.get<Category>(this.apiUrl + 'Category/GetCategories').pipe(
@@ -117,6 +118,14 @@ export class CrudService {
           return response;
         })
       );
+  }
+
+  GetAllCourses(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl + 'Course/GetAllCourses')
+  }
+
+  getCourseById(CourseId: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}Course/GetCourseById?id=${CourseId}`)
   }
 
   CreateLesson(data: LessonModel): Observable<any> {
